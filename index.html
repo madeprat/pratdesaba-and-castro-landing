@@ -415,6 +415,17 @@
 
     .footer-row a { color: rgba(255,255,255,0.75); text-decoration: none; }
 
+    /* Estilo muy discreto para el enlace de tripodapp en el footer */
+    .footer-discreet {
+      color: rgba(255,255,255,0.3) !important;
+      font-size: 0.78rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-discreet:hover {
+      color: rgba(255,255,255,0.6) !important;
+    }
+
     @media (max-width: 940px) {
       .nav-links a:not(.nav-cta) { display: none; }
       .hero { grid-template-columns: 1fr; min-height: auto; padding: 80px 0; }
@@ -443,7 +454,7 @@
       .partner-card { min-height: 455px; padding: 30px; }
       .partner-link { left: 30px; bottom: 30px; }
       .fact { grid-template-columns: 1fr; gap: 5px; }
-      .footer-row { flex-direction: column; align-items: flex-start; }
+      .footer-row { flex-direction: column; align-items: flex-start; gap: 12px; }
     }
   </style>
 </head>
@@ -566,7 +577,8 @@
               Perfil orientado a ingeniería, dirección de proyectos y coordinación de iniciativas complejas,
               especialmente cuando es necesario alinear equipos, ejecución y objetivos estratégicos.
             </p>
-            <a class="partner-link" href="#juan">Conocer a Juan <span aria-hidden="true">→</span></a>
+            <!-- Enlace al subdominio de Juan Carlos -->
+            <a class="partner-link" href="https://jcpratdesaba.prat-cas.com/" target="_blank" rel="noopener noreferrer">Conocer a Juan <span aria-hidden="true">→</span></a>
           </article>
 
           <article class="partner-card" data-initials="MC">
@@ -576,7 +588,8 @@
               Perfil especializado en procesos, sistemas de gestión, calidad y transformación organizativa,
               con foco en convertir complejidad operativa en modelos de trabajo sólidos y gobernables.
             </p>
-            <a class="partner-link" href="#made">Conocer a Made <span aria-hidden="true">→</span></a>
+            <!-- Enlace al blog de Madelaine (madeopina) -->
+            <a class="partner-link" href="https://madeopina.prat-cas.com/" target="_blank" rel="noopener noreferrer">Conocer a Made <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </div>
@@ -599,7 +612,8 @@
             <div class="fact"><strong>Aporta</strong><span>Estructura, liderazgo de ejecución y lectura técnica de problemas complejos.</span></div>
             <div class="fact"><strong>Ideal para</strong><span>Proyectos críticos, entornos internacionales y retos con múltiples stakeholders.</span></div>
           </div>
-          <a class="button" href="https://madeprat.github.io/portfoliojcpp/" target="_blank" rel="noopener noreferrer">Ver perfil profesional de Juan</a>
+          <!-- Enlace al subdominio de Juan Carlos -->
+          <a class="button" href="https://jcpratdesaba.prat-cas.com/" target="_blank" rel="noopener noreferrer">Ver perfil profesional de Juan</a>
         </div>
       </div>
     </section>
@@ -621,7 +635,8 @@
             <div class="fact"><strong>Aporta</strong><span>Diagnóstico, estructuración, mejora y visión integral de la operación.</span></div>
             <div class="fact"><strong>Ideal para</strong><span>Organizaciones que necesitan ordenar, profesionalizar o transformar su modelo operativo.</span></div>
           </div>
-          <a class="button" href="#contacto">Contactar / solicitar perfil completo</a>
+          <!-- Enlace al blog personal de Madelaine (madeopina) -->
+          <a class="button" href="https://madeopina.prat-cas.com/" target="_blank" rel="noopener noreferrer">Visitar blog profesional</a>
         </div>
       </div>
     </section>
@@ -644,6 +659,8 @@
   <footer>
     <div class="wrap footer-row">
       <span>&copy; 2026 Pratdesaba &amp; Castro · Consultoría profesional</span>
+      <!-- Enlace muy discreto a tripodapp en el footer -->
+      <a class="footer-discreet" href="https://tripodapp.prat-cas.com/" target="_blank" rel="noopener noreferrer">Reflexiones</a>
       <a href="#inicio">Volver arriba ↑</a>
     </div>
   </footer>
