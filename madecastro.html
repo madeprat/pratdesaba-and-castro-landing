@@ -1,1023 +1,461 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-palette="tinta">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Madelaine Castro | Gobernanza, calidad, riesgo y ciberseguridad</title>
-<meta name="description" content="Reflexiones sobre calidad, ciberseguridad, gobernanza, riesgo, procesos y mejora continua desde la experiencia profesional de Madelaine Castro.">
-<meta name="keywords" content="calidad, ciberseguridad, GRC, gobernanza, riesgo, continuidad de negocio, ISO, procesos, auditoria, mejora continua, gestion de proyectos">
-<link rel="canonical" href="https://prat-cas.com/madecastro.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madelaine Castro | Gobernanza, calidad, riesgo y procesos</title>
+  <meta name="description" content="Madelaine Castro. Gobernanza, calidad, riesgo y procesos: normas y requisitos convertidos en decisiones útiles y organizaciones más resilientes.">
+  <link rel="canonical" href="https://prat-cas.com/madecastro.html">
+  <meta property="og:title" content="Madelaine Castro">
+  <meta property="og:description" content="Gobernanza, calidad, riesgo y procesos.">
+  <meta property="og:url" content="https://prat-cas.com/madecastro.html">
+  <meta property="og:image" content="https://prat-cas.com/madefoto-web.jpg">
+  <meta property="og:type" content="profile">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230F1726'/%3E%3Ctext x='32' y='48' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='48' fill='%23C9A86A'%3E%26%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root,
+    [data-palette="tinta"] {
+      --bg: #0F1726;
+      --light: rgba(201, 168, 106, 0.07);
+      --text: #ECE8DF;
+      --muted: #8F99AA;
+      --accent: #C9A86A;
+      --line: rgba(236, 232, 223, 0.12);
+    }
+    [data-palette="piedra"] {
+      --bg: #13201C;
+      --light: rgba(194, 160, 96, 0.07);
+      --text: #E8E3D6;
+      --muted: #94A199;
+      --accent: #C2A060;
+      --line: rgba(232, 227, 214, 0.12);
+    }
+    [data-palette="travertino"] {
+      --bg: #E4E1DA;
+      --light: rgba(255, 255, 255, 0.55);
+      --text: #1D232B;
+      --muted: #5E646B;
+      --accent: #8A6A3A;
+      --line: rgba(29, 35, 43, 0.14);
+    }
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Indie+Flower" rel="stylesheet">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+    * { box-sizing: border-box; }
 
-<style>
-:root{
-  --ink:#10242e;
-  --ink2:#1f3a45;
-  --paper:#f4f1ea;
-  --paper2:#ebe6dc;
-  --white:#fffdf8;
-  --bronze:#8b6946;
-  --bronze-dark:#6d4f32;
-  --muted:#5f696d;
-  --line:#d7d0c4;
-}
-*{box-sizing:border-box}
-html,body,div,span,h1,h2,h3,h4,p,a,img,strong,ul,li,form,input,textarea{margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{
-  color:var(--ink);
-  background:var(--paper);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
-  font-size:15px;
-  line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;vertical-align:middle;border:0}
-ul{list-style:none}
-.row{width:1170px;max-width:calc(100% - 40px);margin:0 auto}
-.hero-row{width:940px;max-width:calc(100% - 40px);margin:0 auto}
-.clearfix:after{content:"";display:table;clear:both}
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse 70% 40% at 50% 0%, var(--light), transparent 70%) no-repeat,
+        var(--bg);
+      color: var(--text);
+      font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-/* =========================
-   CABECERA / MENÚ
-   ========================= */
-.site-top{
-  position:relative;
-  z-index:20;
-  background:var(--paper);
-  border-bottom:1px solid var(--line);
-}
-.site-top .row{
-  min-height:80px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:32px;
-}
-.logo-title{
-  color:var(--ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:28px;
-  line-height:1;
-  font-weight:600;
-  letter-spacing:-.02em;
-}
-.tm-menu{display:flex;align-items:center}
-#menu ul{
-  display:flex;
-  align-items:center;
-  gap:0;
-}
-#menu li{list-style:none}
-#menu a{
-  display:block;
-  color:var(--ink2);
-  font-size:13px;
-  font-weight:650;
-  letter-spacing:.03em;
-  padding:29px 12px 25px;
-  border-bottom:2px solid transparent;
-  transition:.2s ease;
-}
-#menu a:hover{
-  color:var(--bronze-dark);
-  border-bottom-color:var(--bronze);
-}
-.mobile-toggle{
-  display:none;
-  border:1px solid var(--line);
-  background:var(--white);
-  color:var(--ink);
-  border-radius:999px;
-  width:42px;height:42px;
-  cursor:pointer;
-}
+    .serif {
+      font-family: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+      font-optical-sizing: auto;
+    }
 
-/* =========================
-   FONDO SUPERIOR + PERFIL
-   ========================= */
-#header-wrapper{position:relative}
-.background-container{
-  position:relative;
-  height:380px;
-  overflow:hidden;
-  background:linear-gradient(180deg,var(--paper) 0%,var(--paper2) 100%);
-}
-.background-container:after{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:42px;
-  width:460px;
-  height:240px;
-  transform:translateX(-50%);
-  border:1px solid rgba(139,105,70,.12);
-  border-radius:50%;
-  filter:blur(.2px);
-}
-.fenix-head{position:relative}
-.fenix-sub-head{
-  margin:-270px auto 0;
-  position:relative;
-  z-index:9;
-  background:var(--white);
-  border:1px solid var(--line);
-  box-shadow:0 16px 44px rgba(16,36,46,.08);
-  border-radius:22px;
-  overflow:hidden;
-}
-.sora-author-box{
-  padding:57px 50px 15px;
-  overflow:hidden;
-  background:var(--white);
-}
-.sora-author-box-image{
-  width:40%;
-  float:left;
-  margin-right:5%;
-  margin-bottom:10px;
-  overflow:hidden;
-  border-radius:18px;
-}
-.sora-author-box-image img{
-  width:100%;
-  height:385px;
-  object-fit:cover;
-  object-position:50% 40%;
-  display:block;
-}
-.sora-author-box-text{
-  padding:0;
-  overflow:hidden;
-  text-align:left;
-}
-.sora-author-box-text-head{
-  color:var(--ink);
-  padding-bottom:25px;
-  margin-bottom:25px;
-  border-bottom:1px solid var(--line);
-}
-.hello-txt{
-  display:inline-block;
-  position:relative;
-  color:var(--bronze-dark);
-  padding:0 0 0 46px;
-  margin-bottom:22px;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.16em;
-  line-height:1.2;
-  text-transform:uppercase;
-}
-.hello-txt:before{
-  content:"";
-  position:absolute;
-  width:34px;
-  height:1px;
-  left:0;
-  top:50%;
-  background:var(--bronze);
-}
-.profile-title{
-  color:var(--ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:42px;
-  line-height:1.05;
-  font-weight:500;
-  letter-spacing:-.035em;
-  margin-bottom:7px;
-}
-.profile-title span{font-weight:400}
-.profile-position{
-  color:var(--muted);
-  font-size:17px;
-  line-height:1.45;
-  font-weight:400;
-}
-.profile-list{margin:0;padding:0}
-.profile-list li{
-  margin-bottom:13px;
-  list-style:none;
-  min-height:20px;
-}
-.profile-list .list-title{
-  display:block;
-  width:120px;
-  float:left;
-  color:var(--ink);
-  font-size:11px;
-  font-weight:700;
-  line-height:20px;
-  letter-spacing:.04em;
-  text-transform:uppercase;
-}
-.profile-list .cont{
-  display:block;
-  margin-left:125px;
-  color:var(--muted);
-  font-size:15px;
-  font-weight:400;
-  line-height:20px;
-}
-.profile-list .cont a:hover{color:var(--bronze-dark)}
-.social-head{
-  padding:15px 0;
-  background:var(--ink);
-  border-top:1px solid rgba(255,255,255,.08);
-}
-.made-tagline{
-  color:var(--white);
-  text-align:center;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.16em;
-  padding:8px 15px;
-}
+    a { color: inherit; }
+    a:focus-visible {
+      outline: 1px solid var(--accent);
+      outline-offset: 6px;
+    }
 
-/* =========================
-   INTRODUCCIÓN
-   ========================= */
-.sora-cv-author-details{
-  margin:15px auto;
-  position:relative;
-  background:var(--white);
-  border:1px solid var(--line);
-  border-radius:22px;
-  box-shadow:0 16px 44px rgba(16,36,46,.07);
-  overflow:hidden;
-}
-.card-content{padding:40px}
-.card-content p{
-  color:var(--ink2);
-  font-size:17px;
-  font-weight:400;
-  line-height:1.8;
-  text-align:center;
-}
-.card-action{
-  border-top:1px solid var(--line);
-  padding:20px;
-}
-.about-btn{text-align:center}
-.btn{
-  display:inline-block;
-  width:auto;
-  min-width:170px;
-  margin:7px;
-  padding:11px 20px;
-  border-radius:999px;
-  background:var(--ink);
-  border:1px solid var(--ink);
-  color:var(--white);
-  font-size:13px;
-  font-weight:700;
-  line-height:1.4;
-  text-align:center;
-  transition:.25s ease;
-}
-.btn:hover{background:var(--ink2);transform:translateY(-1px)}
-.btn.alt{
-  background:transparent;
-  color:var(--ink);
-  border-color:var(--line);
-}
-.btn.alt:hover{
-  border-color:var(--ink);
-  background:var(--paper);
-}
+    .wrap {
+      width: min(100% - 32px, 1040px);
+      margin: 0 auto;
+    }
 
-/* =========================
-   SECCIONES PERSONALIZADAS
-   ========================= */
-.made-section{
-  margin:18px auto;
-  background:var(--white);
-  border:1px solid var(--line);
-  border-radius:22px;
-  box-shadow:0 16px 44px rgba(16,36,46,.06);
-  padding:34px;
-}
-.made-section-title h4,
-.Portfolio-title h4,
-.about-title h4,
-.contact-title h4{
-  color:var(--ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-weight:500;
-  letter-spacing:-.025em;
-  text-transform:none;
-}
-.made-section-title h4{
-  margin:0 0 26px;
-  text-align:center;
-  font-size:30px;
-}
-.made-section-title i,
-.Portfolio-title i,
-.about-title i,
-.contact-title i{
-  color:var(--bronze)!important;
-  margin-right:8px;
-}
-.made-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px;
-}
-.made-two-cols{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:20px;
-}
-.made-card,.made-panel{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:24px;
-}
-.made-card h3,.made-panel h3{
-  margin:0 0 12px;
-  color:var(--ink);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:21px;
-  font-weight:600;
-}
-.made-card p,.made-panel li{
-  color:var(--muted);
-  line-height:1.75;
-}
-.made-panel ul{
-  margin:0;
-  padding-left:18px;
-}
-.made-panel li{
-  list-style:disc;
-  margin:0 0 9px;
-}
-.made-panel strong{color:var(--ink)}
-.made-quote{
-  margin:18px auto;
-  padding:30px 42px;
-  color:var(--ink);
-  background:var(--white);
-  border:1px solid var(--line);
-  border-left:3px solid var(--bronze);
-  box-shadow:0 16px 44px rgba(16,36,46,.06);
-  border-radius:0 18px 18px 0;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:20px;
-  font-style:italic;
-  line-height:1.7;
-}
+    /* Cabecera */
+    .top {
+      display: flex;
+      justify-content: center;
+      padding: 28px 16px 0;
+    }
+    .home {
+      font-style: italic;
+      font-size: 2.6rem;
+      line-height: 1;
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-/* =========================
-   ARTÍCULOS
-   ========================= */
-.Portfolio-title{
-  margin:38px auto 0;
-  width:1170px;
-  max-width:calc(100% - 40px);
-  text-align:center;
-}
-.Portfolio-title h4{font-size:30px}
-.post-empty{
-  width:1170px;
-  max-width:calc(100% - 40px);
-  margin:20px auto 34px;
-  background:var(--white);
-  border:1px solid var(--line);
-  box-shadow:0 16px 44px rgba(16,36,46,.06);
-  border-radius:18px;
-  padding:42px;
-  text-align:center;
-  color:var(--muted);
-}
-.post-empty p{margin-bottom:18px}
+    /* Presentación */
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(40px, 6vw, 88px);
+      align-items: center;
+      padding: clamp(40px, 8vh, 80px) 0 clamp(64px, 10vh, 112px);
+    }
 
-/* =========================
-   ÁREAS DE ESPECIALIZACIÓN
-   ========================= */
-.sora-about-box{
-  background:var(--paper2);
-  padding:44px 0 55px;
-}
-.about-wrap{width:1170px;max-width:calc(100% - 40px);margin:0 auto}
-.about-title{text-align:center;margin-bottom:35px}
-.about-title h4{font-size:30px}
-#pricing{display:flex;gap:20px}
-.price_card{
-  width:33.33%;
-  position:relative;
-}
-.price_card_wrap{
-  height:100%;
-  background:var(--white);
-  border:1px solid var(--line);
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 16px 44px rgba(16,36,46,.05);
-}
-.price_card .header{
-  color:var(--white);
-  background:var(--ink);
-  text-align:center;
-}
-.price{
-  width:100%;
-  display:block;
-  padding:30px 0 7px;
-  color:var(--white);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:28px;
-  line-height:40px;
-  font-weight:500;
-  letter-spacing:1px;
-}
-.name{
-  width:100%;
-  display:block;
-  text-align:center;
-  padding:0 0 30px;
-  color:#d9c4aa;
-  font-size:16px;
-  font-weight:700;
-  letter-spacing:.03em;
-}
-.features{
-  min-height:130px;
-  text-align:center;
-  color:var(--muted);
-}
-.features li{
-  list-style:none;
-  padding:20px 15px;
-  width:100%;
-}
-.features li:not(:last-child){border-bottom:1px solid #e5dfd5}
-.tip{
-  display:block;
-  color:var(--bronze-dark);
-  padding:15px 18px 23px;
-  font-size:12px;
-  text-align:center;
-  font-style:normal;
-}
+    .portrait {
+      margin: 0;
+      animation: appear 1.4s ease-out both;
+    }
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 30%;
+      filter: saturate(0.92);
+    }
 
-/* =========================
-   CONTACTO — CTA MINIMALISTA
-   ========================= */
-.insta-wrap{
-  padding:58px 0 66px;
-  background:var(--paper);
-}
+    .first {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 1rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
 
-.linkedin-cta{
-  width:940px;
-  max-width:calc(100% - 40px);
-  margin:0 auto;
-  position:relative;
-  overflow:hidden;
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:36px;
-  align-items:center;
-  padding:36px 40px;
-  background:var(--ink);
-  color:var(--white);
-  border-radius:22px;
-  box-shadow:0 18px 48px rgba(16,36,46,.14);
-}
+    h1 {
+      margin: 0;
+      font-weight: 400;
+      font-size: clamp(4rem, 9vw, 7.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.015em;
+    }
 
-.linkedin-cta:after{
-  content:"in";
-  position:absolute;
-  right:24px;
-  top:50%;
-  transform:translateY(-52%);
-  color:rgba(255,255,255,.035);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:150px;
-  line-height:1;
-  font-weight:700;
-  pointer-events:none;
-}
+    .role {
+      margin: 22px 0 0;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+    .role strong {
+      font-weight: 500;
+      color: var(--text);
+    }
 
-.linkedin-cta-copy{
-  position:relative;
-  z-index:1;
-}
+    .rule {
+      width: 120px;
+      height: 1px;
+      margin: 32px 0 28px;
+      background: var(--accent);
+      opacity: 0.6;
+      transform-origin: left;
+      animation: draw 1.2s .4s ease-out both;
+    }
 
-.linkedin-kicker{
-  display:block;
-  margin-bottom:8px;
-  color:#d9c4aa;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
+    .statement {
+      margin: 0;
+      max-width: 30ch;
+      font-style: italic;
+      font-size: clamp(1.3rem, 2.3vw, 1.7rem);
+      line-height: 1.4;
+    }
 
-.linkedin-cta h4{
-  margin:0 0 8px;
-  color:var(--white);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:30px;
-  line-height:1.15;
-  font-weight:500;
-  letter-spacing:-.025em;
-}
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 32px;
+      margin-top: 36px;
+    }
+    .link {
+      position: relative;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s ease;
+    }
+    .link:hover::after,
+    .link:focus-visible::after { transform: scaleX(1); }
 
-.linkedin-cta p{
-  max-width:640px;
-  margin:0;
-  color:rgba(255,255,255,.72);
-  font-size:15px;
-  line-height:1.7;
-}
+    /* Secciones */
+    .block {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(32px, 6vw, 88px);
+      padding: clamp(48px, 8vh, 80px) 0;
+      border-top: 1px solid var(--line);
+    }
 
-.linkedin-btn{
-  position:relative;
-  z-index:2;
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  white-space:nowrap;
-  padding:12px 20px;
-  border:1px solid rgba(255,255,255,.22);
-  border-radius:999px;
-  color:var(--white);
-  font-size:13px;
-  font-weight:750;
-  transition:transform .25s ease, background .25s ease, border-color .25s ease;
-}
+    h2 {
+      margin: 0;
+      font-weight: 400;
+      font-size: clamp(2rem, 3.6vw, 2.8rem);
+      line-height: 1.1;
+    }
 
-.linkedin-btn:hover{
-  transform:translateY(-2px);
-  background:var(--white);
-  border-color:var(--white);
-  color:var(--ink);
-}
+    .rows {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .rows li {
+      padding: 0 0 26px;
+      margin: 0 0 26px;
+      border-bottom: 1px solid var(--line);
+    }
+    .rows li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+    .rows h3 {
+      margin: 0 0 6px;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+    .rows p {
+      margin: 0;
+      max-width: 58ch;
+      color: var(--muted);
+    }
 
-/* =========================
-   DINAMISMO SUTIL
-   ========================= */
-.background-container:before{
-  content:"";
-  position:absolute;
-  width:520px;
-  height:520px;
-  left:50%;
-  top:-270px;
-  transform:translateX(-50%);
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(139,105,70,.15) 0%,rgba(139,105,70,.055) 38%,transparent 70%);
-  animation:hero-breathe 9s ease-in-out infinite;
-}
+    .creds {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 11rem 1fr;
+      gap: 0 28px;
+    }
+    .creds dt,
+    .creds dd {
+      margin: 0;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .creds dt {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .creds dt:last-of-type,
+    .creds dd:last-of-type { border-bottom: 0; }
 
-@keyframes hero-breathe{
-  0%,100%{transform:translateX(-50%) scale(.96);opacity:.7}
-  50%{transform:translateX(-50%) scale(1.08);opacity:1}
-}
+    /* Cita */
+    .quote {
+      margin: 0;
+      padding: clamp(64px, 11vh, 112px) 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+    .quote p {
+      margin: 0 auto;
+      max-width: 34ch;
+      font-style: italic;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      line-height: 1.35;
+    }
 
-.reveal{
-  opacity:0;
-  transform:translateY(24px);
-  transition:
-    opacity .72s cubic-bezier(.2,.7,.2,1),
-    transform .72s cubic-bezier(.2,.7,.2,1);
-}
+    /* Blog y contacto */
+    .closing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--line);
+    }
+    .closing > div {
+      padding: clamp(48px, 8vh, 80px) clamp(0px, 3vw, 40px) clamp(48px, 8vh, 80px) 0;
+    }
+    .closing > div + div {
+      padding-left: clamp(24px, 4vw, 56px);
+      padding-right: 0;
+      border-left: 1px solid var(--line);
+    }
+    .closing h2 { margin-bottom: 14px; }
+    .closing p {
+      margin: 0 0 22px;
+      max-width: 44ch;
+      color: var(--muted);
+    }
 
-.reveal.is-visible{
-  opacity:1;
-  transform:none;
-}
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 28px;
+      padding: 28px 16px 28px;
+      border-top: 1px solid var(--line);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    footer a {
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+    footer a:hover,
+    footer a:focus-visible { color: var(--text); }
 
-.made-card,
-.made-panel,
-.price_card_wrap,
-.sora-cv-author-details,
-.made-quote{
-  transition:
-    transform .28s ease,
-    box-shadow .28s ease,
-    border-color .28s ease;
-}
+    @keyframes appear {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes draw {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
 
-.made-card:hover,
-.made-panel:hover,
-.price_card_wrap:hover{
-  transform:translateY(-5px);
-  box-shadow:0 20px 48px rgba(16,36,46,.10);
-  border-color:#c9bfaf;
-}
-
-.sora-author-box-image img{
-  transition:transform .6s cubic-bezier(.2,.7,.2,1);
-}
-
-.sora-author-box-image:hover img{
-  transform:scale(1.018);
-}
-
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .background-container:before{animation:none}
-  .reveal{
-    opacity:1;
-    transform:none;
-    transition:none;
-  }
-  .made-card,
-  .made-panel,
-  .price_card_wrap,
-  .sora-author-box-image img,
-  .linkedin-btn{
-    transition:none;
-  }
-}
-
-/* =========================
-   PIE
-   ========================= */
-.bot-bar-menu{
-  background:var(--ink);
-  border-top:1px solid rgba(255,255,255,.10);
-}
-.bot-menu-wrap{
-  min-height:66px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.copyright-area{
-  color:var(--white);
-  font-size:12px;
-  text-align:center;
-}
-.copyright-area a{color:#d9b78f}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media only screen and (max-width:900px){
-  .site-top .row{min-height:68px}
-  .mobile-toggle{display:block}
-  #menu{
-    display:none;
-    position:absolute;
-    top:68px;
-    left:0;
-    width:100%;
-    background:var(--white);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    box-shadow:0 16px 44px rgba(16,36,46,.08);
-  }
-  #menu.open{display:block}
-  #menu ul{display:block}
-  #menu a{padding:13px 22px;border:0}
-  .sora-author-box-image{
-    width:100%;
-    float:none;
-    margin:0 0 26px;
-  }
-  .sora-author-box-image img{height:520px}
-  .sora-author-box-text{text-align:center}
-  .profile-list{max-width:580px;margin:0 auto;text-align:left}
-  #pricing{display:grid;grid-template-columns:1fr}
-  .price_card{width:100%}
-  .linkedin-cta{grid-template-columns:1fr;gap:22px}
-}
-
-@media only screen and (max-width:768px){
-  .row,.hero-row,.Portfolio-title,.post-empty,.about-wrap{
-    max-width:calc(100% - 24px);
-  }
-  .background-container{height:300px}
-  .fenix-sub-head{margin-top:-215px;border-radius:16px}
-  .sora-author-box{padding:10px}
-  .sora-author-box-image{border-radius:13px}
-  .sora-author-box-image img{height:auto;max-height:none}
-  .sora-author-box-text{padding:10px}
-  .profile-title{font-size:34px}
-  .made-tagline{font-size:9px;letter-spacing:.10em}
-  .profile-list .list-title{
-    width:105px;
-  }
-  .profile-list .cont{
-    margin-left:110px;
-  }
-  .sora-cv-author-details{border-radius:16px}
-  .card-content{padding:24px}
-  .card-content p{font-size:15px}
-  .made-grid,.made-two-cols{grid-template-columns:1fr}
-  .made-section{padding:22px 16px;border-radius:16px}
-  .made-quote{padding:24px 22px}
-  .linkedin-cta{max-width:calc(100% - 24px);padding:30px 26px}
-}
-
-@media only screen and (max-width:480px){
-  .logo-title{font-size:23px}
-  .background-container{height:260px}
-  .fenix-sub-head{margin-top:-190px}
-  .profile-title{font-size:30px}
-  .profile-position{font-size:15px}
-  .profile-list .list-title{
-    width:auto;
-    float:none;
-    margin-bottom:2px;
-  }
-  .profile-list .cont{margin-left:0}
-  .made-section-title h4,.Portfolio-title h4,.about-title h4{font-size:26px}
-  .linkedin-cta h4{font-size:26px}
-  .btn{display:block;margin:8px auto;width:100%}
-  .contact-buttons{grid-template-columns:1fr}
-}
-</style>
-</head>
-
-<body>
-<header class="site-top">
-  <div class="row">
-    <a class="logo-title" href="https://prat-cas.com/madecastro.html">Madelaine Castro</a>
-    <button class="mobile-toggle" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">
-      <i class="fa fa-bars"></i>
-    </button>
-    <nav class="tm-menu" aria-label="Menú principal">
-      <div id="menu">
-        <ul>
-          <li><a href="#perfil">Home</a></li>
-          <li><a href="#section-2">Perfil</a></li>
-          <li><a href="#section-3">Trayectoria</a></li>
-          <li><a href="#content-wrapper">Artículos</a></li>
-          <li><a href="#section-7">Contacto</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section id="header-wrapper">
-    <div class="background-container"></div>
-
-    <div class="fenix-head" id="perfil">
-      <div class="fenix-sub-head hero-row">
-        <div class="sora-author-box clearfix">
-          <div class="sora-author-box-image">
-            <img alt="Madelaine Castro" class="made-profile-photo" src="madefoto.jpg">
-          </div>
-
-          <div class="sora-author-box-text">
-            <div class="sora-author-box-text-head">
-              <span class="hello-txt">Hola</span>
-              <h2 class="profile-title"><span>Soy</span> Madelaine Castro</h2>
-              <h3 class="profile-position">Gobernanza, calidad, riesgo y ciberseguridad</h3>
-            </div>
-
-            <div class="sora-author-box-text-details">
-              <ul class="profile-list">
-                <li class="clearfix">
-                  <strong class="list-title">Rol</strong>
-                  <span class="cont">Head of Process &amp; Quality Assurance · S2 Grupo</span>
-                </li>
-                <li class="clearfix">
-                  <strong class="list-title">Enfoque</strong>
-                  <span class="cont">SGI · GRC · Riesgo · Mejora continua</span>
-                </li>
-                <li class="clearfix">
-                  <strong class="list-title">Especialidad</strong>
-                  <span class="cont">ISO · Continuidad · Auditoría · Dirección de proyectos</span>
-                </li>
-                <li class="clearfix">
-                  <strong class="list-title">Ubicación</strong>
-                  <span class="cont">Valencia, España</span>
-                </li>
-                <li class="clearfix">
-                  <strong class="list-title">Blog</strong>
-                  <span class="cont"><a href="https://madeopina.prat-cas.com/" target="_blank" rel="noopener">madeopina.prat-cas.com</a></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="social-head">
-          <div class="made-tagline">CALIDAD · RIESGO · GOBERNANZA · CIBERSEGURIDAD · MEJORA CONTINUA</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sora-cv-author-details row">
-    <div class="card-content">
-      <p>
-        Soy Madelaine Castro, profesional de la gestión, la calidad y la ciberseguridad.
-        Trabajo en la intersección entre estrategia, procesos, riesgo, cumplimiento y mejora continua,
-        con experiencia en sistemas de gestión, auditoría, continuidad de negocio y dirección de proyectos.
-        Me interesa convertir marcos, normas y requisitos en decisiones útiles, procesos sostenibles y
-        organizaciones más resilientes. En mi blog comparto reflexiones, aprendizajes y herramientas
-        sobre cómo gobernar mejor la complejidad sin perder de vista a las personas.
-      </p>
-    </div>
-    <div class="card-action">
-      <div class="about-btn">
-        <a class="btn alt" href="https://madeopina.prat-cas.com/" target="_blank" rel="noopener">Visitar mi blog</a>       
-        <a class="btn alt" href="#section-7">Contactar</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="sora-special-box" id="section-2">
-    <div class="made-section row">
-      <div class="made-section-title">
-        <h4><i class="lnr lnr-layers"></i> Lo que hago</h4>
-      </div>
-      <div class="made-grid">
-        <article class="made-card">
-          <h3>Gobernanza y GRC</h3>
-          <p>Conecto estrategia, riesgo, cumplimiento y operación para que los controles sirvan a la organización y no se conviertan en un fin en sí mismos.</p>
-        </article>
-        <article class="made-card">
-          <h3>Sistemas de gestión</h3>
-          <p>Diseño, evolución y auditoría de sistemas de gestión orientados a calidad, seguridad, continuidad, servicios, innovación y mejora continua.</p>
-        </article>
-        <article class="made-card">
-          <h3>Riesgo y resiliencia</h3>
-          <p>Trabajo sobre riesgo, continuidad de negocio y ciberresiliencia con una mirada transversal: personas, procesos, tecnología y capacidad de decisión.</p>
-        </article>
-        <article class="made-card">
-          <h3>Procesos y transformación</h3>
-          <p>Mejora de procesos, métricas, gobierno de proyectos y cambio organizativo para convertir la complejidad en una forma de trabajar más clara y sostenible.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="sora-works-box" id="section-3">
-    <div class="made-section row">
-      <div class="made-section-title">
-        <h4><i class="lnr lnr-briefcase"></i> Trayectoria y credenciales</h4>
-      </div>
-      <div class="made-two-cols">
-        <div class="made-panel">
-          <h3>Experiencia profesional</h3>
-          <ul>
-            <li><strong>Head of Process &amp; Quality Assurance · S2 Grupo.</strong></li>
-            <li>Gobierno y evolución del sistema de gestión, auditorías internas, cumplimiento y mejora continua.</li>
-            <li>Dirección de proyectos y trabajo transversal con equipos multidisciplinares en entornos complejos y regulados.</li>
-            <li>Experiencia en gestión de riesgos, continuidad de negocio, seguridad de la información, GRC y excelencia operativa.</li>
-            <li>Secretaría General de itSMF España.</li>
-          </ul>
-        </div>
-        <div class="made-panel">
-          <h3>Certificaciones y marcos</h3>
-          <ul>
-            <li>PMP · PRINCE2 · ScrumMaster.</li>
-            <li>ITIL · COBIT · CISA.</li>
-            <li>Auditoría y sistemas de gestión: ISO 9001, ISO/IEC 20000-1, ISO 22301, ISO/IEC 27001 y ENS.</li>
-            <li>Experiencia de gestión con ISO 14001 y UNE 166002.</li>
-            <li>Lean Operation Manager · DPD · Ethical Hacker · Oracle DBA/Developer.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="made-quote row">
-    “La madurez de una organización no se mide por la cantidad de procedimientos que tiene,
-    sino por la calidad de las decisiones que es capaz de tomar de forma consistente.”
-  </div>
-
-  <section id="content-wrapper">
-    <div class="Portfolio-title">
-      <h4><i class="lnr lnr-file-add"></i> Ideas y artículos</h4>
-    </div>
-    <div class="post-empty">
-      <p>Aviso: Lo que vas a leer aquí puede sacudir tus opiniones más cómodas, desarmar algún que otro dogma viejuno y obligarte a pensar fuera de la caja. Si prefieres la paz de lo conocido... aún estás a tiempo de no hacer click.</p>
-      <a class="btn alt" href="https://madeopina.prat-cas.com/" target="_blank" rel="noopener">Visitar mi Blog</a>
-    </div>
-  </section>
-
-  <section class="sora-about-box" id="section-6">
-    <div class="about-wrap">
-      <div class="about-title">
-        <h4><i class="lnr lnr-diamond"></i> Áreas de especialización</h4>
-      </div>
-
-      <div id="pricing">
-        <article class="price_card alpha">
-          <div class="price_card_wrap">
-            <div class="header">
-              <span class="price">GRC</span>
-              <span class="name">Gobernanza y Riesgo</span>
-            </div>
-            <ul class="features">
-              <li>Gobierno, riesgo y cumplimiento</li>
-              <li>Ciberresiliencia y continuidad</li>
-              <li>Gestión de vulnerabilidades y seguridad</li>
-            </ul>
-            <span class="tip">* Decisiones con contexto, riesgo y propósito.</span>
-          </div>
-        </article>
-
-        <article class="price_card bravo">
-          <div class="price_card_wrap">
-            <div class="header">
-              <span class="price">SGI</span>
-              <span class="name">Sistemas de Gestión</span>
-            </div>
-            <ul class="features">
-              <li>Calidad, servicios y seguridad</li>
-              <li>Continuidad, medioambiente e innovación</li>
-              <li>Auditoría, cumplimiento y mejora</li>
-            </ul>
-            <span class="tip">* Normas convertidas en gestión útil.</span>
-          </div>
-        </article>
-
-        <article class="price_card charlie">
-          <div class="price_card_wrap">
-            <div class="header">
-              <span class="price">PMO</span>
-              <span class="name">Proyectos y Mejora</span>
-            </div>
-            <ul class="features">
-              <li>Dirección y gobierno de proyectos</li>
-              <li>Procesos y eficiencia operativa</li>
-              <li>Lean, Agile y mejora continua</li>
-            </ul>
-            <span class="tip">* Transformar con método y foco en resultados.</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="insta-wrap" id="section-7">
-    <div class="linkedin-cta">
-      <div class="linkedin-cta-copy">
-        <span class="linkedin-kicker">Conversemos</span>
-        <h4>¿Tenemos algo interesante de lo que hablar?</h4>
-        <p>
-          Si compartimos intereses profesionales, una oportunidad o simplemente una buena conversación
-          sobre gobernanza, calidad, riesgo, procesos o transformación, encuéntrame en LinkedIn.
-        </p>
-      </div>
-      <a class="linkedin-btn" href="https://www.linkedin.com/in/madelaine-r-c-55906387/" target="_blank" rel="noopener noreferrer"
-         aria-label="Conectar con Madelaine Castro en LinkedIn">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-        Conectar en LinkedIn <span aria-hidden="true">↗</span>
-      </a>
-    </div>
-  </section>
-</main>
-
-<footer class="bot-bar-menu">
-  <div class="bot-menu-wrap row">
-    <div class="copyright-area">© 2026 Madelaine Castro · <a href="https://prat-cas.com/madecastro.html">prat-cas.com/madecastro.html</a></div>
-  </div>
-</footer>
-
-<script>
-document.querySelectorAll('#menu a').forEach(function(a){
-  a.addEventListener('click', function(){
-    document.getElementById('menu').classList.remove('open');
-  });
-});
-
-/* Movimiento discreto al entrar los bloques en pantalla */
-(function(){
-  var targets = document.querySelectorAll(
-    '.sora-cv-author-details, .made-section, .made-quote, #content-wrapper, .sora-about-box .about-wrap, .linkedin-cta'
-  );
-
-  targets.forEach(function(el){ el.classList.add('reveal'); });
-
-  if (!('IntersectionObserver' in window)) {
-    targets.forEach(function(el){ el.classList.add('is-visible'); });
-    return;
-  }
-
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+    @media (max-width: 820px) {
+      .intro {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 36px;
       }
-    });
-  }, {
-    threshold:0.12,
-    rootMargin:'0px 0px -6% 0px'
-  });
+      .portrait {
+        width: min(100%, 340px);
+        margin: 0 auto;
+      }
+      .rule {
+        margin-left: auto;
+        margin-right: auto;
+        transform-origin: center;
+      }
+      .statement { margin: 0 auto; }
+      .links { justify-content: center; }
+      .block {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .closing { grid-template-columns: 1fr; }
+      .closing > div,
+      .closing > div + div {
+        padding: 48px 0;
+        border-left: 0;
+      }
+      .closing > div + div { border-top: 1px solid var(--line); }
+    }
 
-  targets.forEach(function(el){ observer.observe(el); });
-})();
-</script>
+    @media (max-width: 520px) {
+      .creds { grid-template-columns: 1fr; }
+      .creds dt {
+        padding-bottom: 2px;
+        border-bottom: 0;
+      }
+      .creds dd { padding-top: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .portrait, .rule { animation: none; }
+      .link::after { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a class="home serif" href="./" aria-label="Volver a Pratdesaba &amp; Castro">&amp;</a>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <figure class="portrait">
+        <img src="madefoto-web.jpg" width="880" height="1100" alt="Retrato de Madelaine Castro">
+      </figure>
+      <div>
+        <span class="first">Madelaine</span>
+        <h1 class="serif">Castro</h1>
+        <p class="role"><strong>Head of Process &amp; Quality Assurance</strong> en S2 Grupo</p>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="statement serif">Convierto normas y requisitos en decisiones útiles, procesos sostenibles y organizaciones más resilientes.</p>
+        <div class="links">
+          <a class="link" href="https://www.linkedin.com/in/madelaine-r-c-55906387/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="link" href="https://madeopina.prat-cas.com/" target="_blank" rel="noopener">Blog Made Opina</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="hago">
+      <h2 id="hago" class="serif">Lo que hago</h2>
+      <ul class="rows">
+        <li>
+          <h3 class="serif">Gobernanza y GRC</h3>
+          <p>Conecto estrategia, riesgo, cumplimiento y operación para que los controles sirvan a la organización, no al revés.</p>
+        </li>
+        <li>
+          <h3 class="serif">Sistemas de gestión</h3>
+          <p>Diseño, integro y audito sistemas de calidad, seguridad, continuidad, servicios, medioambiente e innovación.</p>
+        </li>
+        <li>
+          <h3 class="serif">Riesgo y resiliencia</h3>
+          <p>Continuidad de negocio y ciberresiliencia con una mirada completa: personas, procesos, tecnología y capacidad de decisión.</p>
+        </li>
+        <li>
+          <h3 class="serif">Procesos y transformación</h3>
+          <p>Procesos, métricas y gobierno de proyectos para que la complejidad se convierta en una forma de trabajar clara y sostenible.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="trayectoria">
+      <h2 id="trayectoria" class="serif">Trayectoria</h2>
+      <ul class="rows">
+        <li>
+          <h3 class="serif">S2 Grupo</h3>
+          <p>Más de siete años construyendo desde cero el sistema de gestión integrado: siete marcos certificados, entre ellos ISO 9001, 27001, 22301 y ENS Alta, prácticamente sin no conformidades. Dirijo un equipo de siete personas.</p>
+        </li>
+        <li>
+          <h3 class="serif">itSMF España</h3>
+          <p>Fui Secretaria General de la asociación de referencia en gestión de servicios TI.</p>
+        </li>
+        <li>
+          <h3 class="serif">Service Management Institute</h3>
+          <p>Soy coautora del SMBoK, el cuerpo de conocimiento de gestión de servicios.</p>
+        </li>
+        <li>
+          <h3 class="serif">Más de 25 años en tecnología</h3>
+          <p>Ingeniera informática. Del desarrollo y la administración de bases de datos a la dirección de calidad, riesgo y procesos.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block" aria-labelledby="credenciales">
+      <h2 id="credenciales" class="serif">Credenciales</h2>
+      <dl class="creds">
+        <dt>Lead Auditor</dt>
+        <dd>ISO 9001, 14001, 20000-1, 22301, 27001, 56001 y ENS categoría Alta</dd>
+        <dt>Proyectos y servicios</dt>
+        <dd>PMP, PRINCE2, ScrumMaster, ITIL y COBIT</dd>
+        <dt>Continuidad</dt>
+        <dd>ISO 22301 Senior</dd>
+        <dt>Tecnología</dt>
+        <dd>Oracle DBA y Developer</dd>
+        <dt>Formación</dt>
+        <dd>CISA, Delegada de Protección de Datos, EC-Council y Lean Operation Manager</dd>
+      </dl>
+    </section>
+  </main>
+
+  <blockquote class="quote">
+    <div class="wrap">
+      <p class="serif">«La madurez de una organización no se mide por la cantidad de procedimientos que tiene, sino por la calidad de las decisiones que es capaz de tomar de forma consistente.»</p>
+    </div>
+  </blockquote>
+
+  <section class="wrap closing">
+    <div>
+      <h2 class="serif">Made Opina</h2>
+      <p>Lo que vas a leer aquí puede sacudir tus opiniones más cómodas y desarmar algún que otro dogma viejuno. Si prefieres la paz de lo conocido, aún estás a tiempo.</p>
+      <a class="link" href="https://madeopina.prat-cas.com/" target="_blank" rel="noopener">Leer el blog</a>
+    </div>
+    <div>
+      <h2 class="serif">Hablemos</h2>
+      <p>Una oportunidad, un proyecto o una buena conversación sobre gobernanza, calidad, riesgo o procesos.</p>
+      <a class="link" href="https://www.linkedin.com/in/madelaine-r-c-55906387/" target="_blank" rel="noopener noreferrer">Escríbeme en LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 Madelaine Castro</span>
+    <a href="./">Pratdesaba &amp; Castro</a>
+    <a href="proyectos.html">Proyectos</a>
+  </footer>
 </body>
 </html>
